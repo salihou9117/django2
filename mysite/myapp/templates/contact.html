@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include 'block/title.html' %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/preload.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'css/index.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/contacts2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+</head>
+<body>
+
+   {% include 'block/header.html' %}
+
+<header class="page" >
+    <div class="pagehead container-fluid" >
+        <div class="container">
+            <h1 class="page_header" id="first">Contacts</h1>
+            <p class="page_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illo labore nesciunt quos .</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="contacts section">
+        <div class="container d-flex flex-wrap flex-xl-nowrap justify-content-between">
+            <div class="contacts_form col-12 col-lg-5">
+                <div class="contacts_form-header">
+                    <h2 class="contacts_form-header_title">Have any Questions?</h2>
+                    <p class="contacts_form-header_text">
+                        Elementum eu facilisis sed odio morbi quis commodo odio. Mauris rhoncus aenean vel elit scelerisque mauris
+                        pellentesque
+                    </p>
+                </div>
+                <form class="contacts_form-form d-flex flex-column" data-type="feedback" action="form.php" method="post">
+                    <label class="contacts_form-form_label" for="contactsName">Your Name</label>
+                    <input
+                        class="contacts_form-form_field field required"
+                        type="text"
+                        name="contactsName"
+                        id="contactsName"
+                        placeholder="Your name"
+                    />
+                    <label class="contacts_form-form_label" for="contactsEmail">Your Email</label>
+                    <input
+                        class="contacts_form-form_field field required"
+                        type="text"
+                        data-type="email"
+                        name="contactsEmail"
+                        id="contactsEmail"
+                        placeholder="you@example.com"
+                    />
+                    <label class="contacts_form-form_label" for="contactsMessage">Message</label>
+                    <textarea
+                        class="contacts_form-form_field field required"
+                        data-type="message"
+                        name="contactsMessage"
+                        id="contactsMessage"
+                        placeholder="Type Your Message"
+                    ></textarea>
+                    <button class="contacts_form-form_btn btn" type="submit">Send a Message</button>
+                </form>
+            </div>
+            <div class="contacts_info col-12 col-lg-6 col-xl-auto flex-xl-grow-1">
+                <div class="contacts_info-map">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contacts section">
+        <div class="container">
+            <ul class="contacts_info d-flex flex-wrap justify-content-between">
+                <li class="contacts_info-item col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center" data-order="1">
+                    <span class="contacts_info-item_icon d-flex align-items-center justify-content-center" id="mybtn">
+                        <i class="icon-envelope_open secondary" id="info"></i>
+                    </span>
+                    <h4 class="contacts_info-item_title">Email</h4>
+                    <div class="contacts_info-item_main d-flex flex-column align-items-center">
+                        <a class="link" href="mailto:example@domain.com">name@gmail.com</a>
+                    </div>
+                </li>
+                <li class="contacts_info-item col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center" data-order="2">
+                    <span class="contacts_info-item_icon d-flex align-items-center justify-content-center" id="mybtn">
+                        <i class="icon-call secondary" id="info"></i>
+                    </span>
+                    <h4 class="contacts_info-item_title">Phone</h4>
+                    <div class="contacts_info-item_main d-flex flex-column align-items-center">
+                        <a class="link" href="tel:+1234567890">+1-896-882-3255</a>
+                        <a class="link" href="tel:+1234567890">+1-896-882-3255</a>
+                    </div>
+                </li>
+                <li class="contacts_info-item col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center" data-order="3">
+                    <span class="contacts_info-item_icon d-flex align-items-center justify-content-center" id="mybtn">
+                        <i class="icon-location secondary" id="info"></i>
+                    </span>
+                    <h4 class="contacts_info-item_title">Location</h4>
+                    <div class="contacts_info-item_main d-flex flex-column align-items-center">
+                        <span>211 Lehner Valleys Apt.</span>
+                       
+                    </div>
+                </li>
+                <li class="contacts_info-item col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center" data-order="4">
+                    <span class="contacts_info-item_icon d-flex align-items-center justify-content-center" id="mybtn">
+                        <i class="icon-clock secondary" id="info"></i>
+                    </span>
+                    <h4 class="contacts_info-item_title">Open Hours</h4>
+                    <div class="contacts_info-item_main d-flex flex-column align-items-center">
+                        <span>9:00 am to 5:00 pm</span>
+                        <span>Monday to Saturday</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+   {% include 'block/footer.html' %}
+   {% include 'block/cart.html' %}
+   <script src="{% static 'js/common.min.js' %}"></script>
+   <script src="{% static 'js/index.min.js' %}"></script>
+</body>
+</html>

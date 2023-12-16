@@ -1,0 +1,824 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'block/title.html' %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/preload.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/shop2.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/shop.css' %}" />
+    <!-- <link rel="stylesheet" href="{% static 'css/index.css' %}"> -->
+    
+</head>
+<body>
+    {% include 'block/header.html' %}
+
+       <!-- Shop content start -->
+    <header class="page" >
+        <div class="pagehead container-fluid" >
+            <div class="container">
+                <h1 class="page_header" id="first">Shop</h1>
+                <p class="page_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illo labore nesciunt quos .</p>
+            </div>
+        </div>
+    </header>
+    <main>
+   
+          <!-- Promo section start -->
+        <!-- <div class="promo section--nopb">
+            <div class="container d-flex flex-column flex-md-row">
+                <div class="promo_banner promo_banner-img" data-aos="fade-right">
+                    <h3 class="promo_banner-header" id="first">First Product</h3>
+                    <p class="promo_banner-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum veniam repellendus autem exercitationem officiis temporibus totam amet incidunt.
+                    </p>
+                    <a class="promo_banner-btn btn" href="#" id="first">Shop Now</a>
+                </div>
+                <div
+                    class="promo_banner promo_banner-img d-flex flex-column justify-content-end align-items-start"
+                    data-aos="fade-left"
+                >
+                    <h3 class="promo_banner-header" id="first">Second Product</h3>
+                    <a class="promo_banner-btn btn" href="#" id="first">Shop Now</a>
+                </div>
+            </div>
+        </div> -->
+        
+        
+        <!-- Products section start -->
+        <div class="shop-wrapper section--nopb">
+            <div class="container d-flex flex-lg-row flex-wrap flex-column justify-content-between">
+                <a
+                    class="filterTrigger d-flex d-lg-none align-items-center justify-content-center"
+                    href="#"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#shopFilters"
+                >
+                    Filters
+                    <i class="icon-caret_down icon"></i>
+                </a>
+                <div class="shop_products d-flex flex-column">
+                    <ul class="shop_products-list d-sm-flex flex-wrap">
+                        <li class="shop_products-list_item col-sm-6 col-md-4 col-lg-6 col-xl-4" data-order="1">
+                            <div class="products_list-item_wrapper d-flex flex-column">
+                                <div class="media">
+                                    <a href="{% url 'shop' %}" target="_blank" rel="noopener norefferer">
+                                        <picture>
+                                            <img src="{% static 'img/image4.webp' %}" alt="">    
+                                        </picture>
+                                        </a>
+                                        <div class="overlay d-flex justify-content-between align-items-start">
+                                            <div class="action d-flex flex-column">
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href="{% url 'shop' %}"
+                                                    data-trigger="compare"
+                                                >
+                                                    <i class="icon-compare"></i>
+                                                </a>
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href=""
+                                                    data-role="wishlist"
+                                                >
+                                                    <i class="icon-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main d-flex flex-column align-items-center justify-content-between">
+                                        <div class="main_rating">
+                                            <ul class="main_rating-stars d-flex align-items-center justify-content-center accent">
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer">
+                                            Lorem ipsum dolor. 
+                                        </a>
+                                        <ul class="main_table d-flex flex-column align-items-center">
+                                            <li class="list-item">
+                                                <span class="property">THC</span>
+                                                <span class="value">17.00-23.00%</span>
+                                            </li>
+                                            <li class="list-item">
+                                                <span class="property">CBD</span>
+                                                <span class="value">0.00-1.00%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="main_price">
+                                            <span class="price">$9.99</span>
+                                        </div>
+                                        <a class="btn btn--green" href="{ url 'cart'}">Add to Cart</a>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="shop_products-list_item col-sm-6 col-md-4 col-lg-6 col-xl-4" data-order="1">
+                            <div class="products_list-item_wrapper d-flex flex-column">
+                                <div class="media">
+                                    <a href="{% url 'shop' %}" target="_blank" rel="noopener norefferer">
+                                        <picture>
+                                            <img src="{% static 'img/image4.webp' %}" alt="">    
+                                        </picture>
+                                        </a>
+                                        <div class="overlay d-flex justify-content-between align-items-start">
+                                            <div class="action d-flex flex-column">
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href="{% url 'shop' %}"
+                                                    data-trigger="compare"
+                                                >
+                                                    <i class="icon-compare"></i>
+                                                </a>
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href=""
+                                                    data-role="wishlist"
+                                                >
+                                                    <i class="icon-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main d-flex flex-column align-items-center justify-content-between">
+                                        <div class="main_rating">
+                                            <ul class="main_rating-stars d-flex align-items-center justify-content-center accent">
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer">
+                                            Lorem ipsum dolor. 
+                                        </a>
+                                        <ul class="main_table d-flex flex-column align-items-center">
+                                            <li class="list-item">
+                                                <span class="property">THC</span>
+                                                <span class="value">17.00-23.00%</span>
+                                            </li>
+                                            <li class="list-item">
+                                                <span class="property">CBD</span>
+                                                <span class="value">0.00-1.00%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="main_price">
+                                            <span class="price">$9.99</span>
+                                        </div>
+                                        <a class="btn btn--green" href="{ url 'cart'}">Add to Cart</a>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="shop_products-list_item col-sm-6 col-md-4 col-lg-6 col-xl-4" data-order="1">
+                            <div class="products_list-item_wrapper d-flex flex-column">
+                                <div class="media">
+                                    <a href="{% url 'shop' %}" target="_blank" rel="noopener norefferer">
+                                        <picture>
+                                            <img src="{% static 'img/image4.webp' %}" alt="">    
+                                        </picture>
+                                        </a>
+                                        <div class="overlay d-flex justify-content-between align-items-start">
+                                            <div class="action d-flex flex-column">
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href="{% url 'shop' %}"
+                                                    data-trigger="compare"
+                                                >
+                                                    <i class="icon-compare"></i>
+                                                </a>
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href=""
+                                                    data-role="wishlist"
+                                                >
+                                                    <i class="icon-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main d-flex flex-column align-items-center justify-content-between">
+                                        <div class="main_rating">
+                                            <ul class="main_rating-stars d-flex align-items-center justify-content-center accent">
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer">
+                                            Lorem ipsum dolor. 
+                                        </a>
+                                        <ul class="main_table d-flex flex-column align-items-center">
+                                            <li class="list-item">
+                                                <span class="property">THC</span>
+                                                <span class="value">17.00-23.00%</span>
+                                            </li>
+                                            <li class="list-item">
+                                                <span class="property">CBD</span>
+                                                <span class="value">0.00-1.00%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="main_price">
+                                            <span class="price">$9.99</span>
+                                        </div>
+                                        <a class="btn btn--green" href="{ url 'cart'}">Add to Cart</a>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="shop_products-list_item col-sm-6 col-md-4 col-lg-6 col-xl-4" data-order="1">
+                            <div class="products_list-item_wrapper d-flex flex-column">
+                                <div class="media">
+                                    <a href="{% url 'shop' %}" target="_blank" rel="noopener norefferer">
+                                        <picture>
+                                            <img src="{% static 'img/image4.webp' %}" alt="">    
+                                        </picture>
+                                        </a>
+                                        <div class="overlay d-flex justify-content-between align-items-start">
+                                            <div class="action d-flex flex-column">
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href="{% url 'shop' %}"
+                                                    data-trigger="compare"
+                                                >
+                                                    <i class="icon-compare"></i>
+                                                </a>
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href=""
+                                                    data-role="wishlist"
+                                                >
+                                                    <i class="icon-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main d-flex flex-column align-items-center justify-content-between">
+                                        <div class="main_rating">
+                                            <ul class="main_rating-stars d-flex align-items-center justify-content-center accent">
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer">
+                                            Lorem ipsum dolor. 
+                                        </a>
+                                        <ul class="main_table d-flex flex-column align-items-center">
+                                            <li class="list-item">
+                                                <span class="property">THC</span>
+                                                <span class="value">17.00-23.00%</span>
+                                            </li>
+                                            <li class="list-item">
+                                                <span class="property">CBD</span>
+                                                <span class="value">0.00-1.00%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="main_price">
+                                            <span class="price">$9.99</span>
+                                        </div>
+                                        <a class="btn btn--green" href="{ url 'cart'}">Add to Cart</a>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="shop_products-list_item col-sm-6 col-md-4 col-lg-6 col-xl-4" data-order="1">
+                            <div class="products_list-item_wrapper d-flex flex-column">
+                                <div class="media">
+                                    <a href="{% url 'shop' %}" target="_blank" rel="noopener norefferer">
+                                        <picture>
+                                            <img src="{% static 'img/image4.webp' %}" alt="">    
+                                        </picture>
+                                        </a>
+                                        <div class="overlay d-flex justify-content-between align-items-start">
+                                            <div class="action d-flex flex-column">
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href="{% url 'shop' %}"
+                                                    data-trigger="compare"
+                                                >
+                                                    <i class="icon-compare"></i>
+                                                </a>
+                                                <a
+                                                    class="action_link d-flex align-items-center justify-content-center"
+                                                    href=""
+                                                    data-role="wishlist"
+                                                >
+                                                    <i class="icon-heart"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="main d-flex flex-column align-items-center justify-content-between">
+                                        <div class="main_rating">
+                                            <ul class="main_rating-stars d-flex align-items-center justify-content-center accent">
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                                <li class="main_rating-stars_star">
+                                                    <i class="icon-star_fill"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer">
+                                            Lorem ipsum dolor. 
+                                        </a>
+                                        <ul class="main_table d-flex flex-column align-items-center">
+                                            <li class="list-item">
+                                                <span class="property">THC</span>
+                                                <span class="value">17.00-23.00%</span>
+                                            </li>
+                                            <li class="list-item">
+                                                <span class="property">CBD</span>
+                                                <span class="value">0.00-1.00%</span>
+                                            </li>
+                                        </ul>
+                                        <div class="main_price">
+                                            <span class="price">$9.99</span>
+                                        </div>
+                                        <a class="btn btn--green" href="{ url 'cart'}">Add to Cart</a>
+                                    </div>
+                                </div>
+                        </li>
+                    </ul>
+                    <ul class="pagination d-flex align-items-center">
+                        <li class="pagination-page">
+                            <a
+                                class="pagination-page_link d-flex align-items-center justify-content-center"
+                                href="#"
+                                data-current="true"
+                                >1</a
+                            >
+                        </li>
+                        <li class="pagination-page">
+                            <a class="pagination-page_link d-flex align-items-center justify-content-center" href="#">2</a>
+                        </li>
+                        <li class="pagination-page">
+                            <a class="pagination-page_link d-flex align-items-center justify-content-center" href="#">3</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shop_aside">
+                    <div class="shop_aside-wrapper collapse" id="shopFilters">
+                        <div class="shop_aside-block shop_aside-block--search">
+                            <h4 class="shop_aside-block_header d-flex align-items-center" id="first">
+                                <span class="leaf">
+                                    <img src="{% static 'img/logo.png' %}" width="35" height="35" alt="">
+                                </span>
+                                Search by Products
+                            </h4>
+                            <form class="form form--search" data-type="searchProducts" action="#" method="get">
+                                <input class="field required" type="text" placeholder="Search..." />
+                                <button class="btn" type="submit">Search</button>
+                            </form>
+                        </div>
+                        <div class="shop_aside-block shop_aside-block--categories">
+                            <h4 class="shop_aside-block_header d-flex align-items-center" id="first">
+                                <span class="leaf">
+                                    <img src="{% static 'img/logo.png' %}" width="35" height="35" alt="">
+                                </span>
+                                Product Categories
+                            </h4>
+                            <ul class="list">
+                                <li class="list-item d-flex align-items-center">
+                                    <input type="radio" id="sale" name="category" />
+                                    <label for="sale">On Sale</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="flower" name="category" />
+                                    <label for="flower">Flower</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="seeds" name="category" />
+                                    <label for="seeds">Seeds</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="oil" name="category" checked />
+                                    <label for="oil">Oil</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="concentrate" name="category" />
+                                    <label for="concentrate">Concentrate</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="cartridges" name="category" />
+                                    <label for="cartridges">Cartridges</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="edible" name="category" />
+                                    <label for="edible">Edible</label>
+                                </li>
+                            </ul>
+                        </div>                       
+                        <div class="shop_aside-block shop_aside-block--price">
+                            <h4 class="shop_aside-block_header d-flex align-items-center" id="first">
+                                <span class="leaf">
+                                    <img src="{% static 'img/logo.png' %}" width="35" height="35" alt="">
+                                </span>
+                                Filter by Price
+                            </h4>
+                            <div class="range-slider"></div>
+                            <div class="range-output d-flex align-items-center justify-content-between">
+                                <input id="priceMin" type="text" readonly value="4$" />
+                                <input id="priceMax" type="text" readonly value="1020$" />
+                            </div>
+                        </div>
+                      
+                        <div class="shop_aside-block shop_aside-block--thc">
+                            <h4 class="shop_aside-block_header d-flex align-items-center" id="first">
+                                <span class="leaf">
+                                    <img src="{% static 'img/logo.png' %}" width="35" height="35" alt="">
+                                </span>
+                                THC
+                            </h4>
+                            <ul class="list">
+                                <li class="list-item">
+                                    <input type="radio" id="010-thc" name="thc" checked />
+                                    <label for="010-thc">0% - 10%</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="1020-thc" name="thc" />
+                                    <label for="1020-thc">10% - 20%</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="3040-thc" name="thc" />
+                                    <label for="3040-thc">30% - 40%</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="4050-thc" name="thc" />
+                                    <label for="4050-thc">40% - 50%</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="shop_aside-block shop_aside-block--cbd">
+                            <h4 class="shop_aside-block_header d-flex align-items-center" id="first">
+                                <span class="leaf">
+                                    <img src="{% static 'img/logo.png' %}" width="35" height="35" alt="">
+                                </span>
+                                CBD
+                            </h4>
+                            <ul class="list">
+                                <li class="list-item">
+                                    <input type="radio" id="010-cbd" name="cbd" />
+                                    <label for="010-cbd">0% - 10%</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="1020-cbd" name="cbd" checked />
+                                    <label for="1020-cbd">10% - 20%</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="3040-cbd" name="cbd" />
+                                    <label for="3040-cbd">30% - 40%</label>
+                                </li>
+                                <li class="list-item">
+                                    <input type="radio" id="4050-cbd" name="cbd" />
+                                    <label for="4050-cbd">40% - 50%</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Products section end -->
+
+        <!-- Promo section start -->
+        <div class="promo section--nopb">
+            <div class="container d-flex flex-column flex-md-row">
+                <div class="promo_banner promo_banner--big" data-aos="fade-right">
+                    <h3 class="promo_banner-header" id="first">Product</h3>
+                    <p class="promo_banner-text">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam, aliquid distinctio. 
+                    </p>
+                    <a class="promo_banner-btn btn" id="first" href="{url 'shop'}">Shop Now</a>
+                </div>
+                <div
+                    class="promo_banner promo_banner--small d-flex flex-column justify-content-end align-items-start"
+                    data-aos="fade-left"
+                >
+                    <h3 class="promo_banner-header" id="first">Product</h3>
+                    <a class="promo_banner-btn btn" id="first" href="{% url 'shop' %}">Shop Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top products section start -->
+        <section class="top section--nopb">
+            <div class="container">
+                <h2 class="top_header" id="first">Top Sales Products</h2>
+                <ul class="top_list d-lg-flex flex-wrap">
+                    <li class="top_list-item col-lg-6" data-order="1">
+                        <div class="top_list-item_wrapper d-flex flex-column flex-sm-row flex-lg-column flex-xxl-row">
+                            <div class="media">
+                                <a href="product.html" target="_blank" rel="noopener norefferer">
+                                    <picture>
+                                        <img src="{% static 'img/placeholder.jpg' %}" alt="">    
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="main d-md-flex flex-column">
+                                <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer"
+                                    >THC Full Spectrum: Natural</a
+                                >
+                                <ul class="main_table d-flex flex-column">
+                                    <li class="list-item">
+                                        <span class="property">THC</span>
+                                        <span class="value">110.00-160.00%</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="property">CBD</span>
+                                        <span class="value">0.00-1.00mg/g</span>
+                                    </li>
+                                </ul>
+                                <div class="main_price">
+                                    <span class="price price--old">$45.99</span>
+                                    <span class="price price--new">$36.87</span>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="btn" href="#">Add to Cart</a>
+                                    <div class="action d-flex">
+                                        <a
+                                            class="action_link d-flex align-items-center justify-content-center"
+                                            href="#"
+                                            data-role="wishlist"
+                                        >
+                                            <i class="icon-heart"></i>
+                                        </a>
+                                        <a
+                                            class="action_link d-flex align-items-center justify-content-center"
+                                            href="#"
+                                            data-trigger="view"
+                                        >
+                                            <i class="icon-eye"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="top_list-item col-lg-6" data-order="2">
+                        <div class="top_list-item_wrapper d-flex flex-column flex-sm-row flex-lg-column flex-xxl-row">
+                            <div class="media">
+                                <a href="product.html" target="_blank" rel="noopener norefferer">
+                                    <picture>
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %} " srcset="{% static 'img/placeholder.jpg' %} " type="image/webp" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %} " src="{% static 'img/placeholder.jpg' %} " alt="media" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="main d-md-flex flex-column">
+                                <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer">Black Dog</a>
+                                <ul class="main_table d-flex flex-column">
+                                    <li class="list-item">
+                                        <span class="property">THC</span>
+                                        <span class="value">110.00-160.00%</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="property">CBD</span>
+                                        <span class="value">0.00-1.00mg/g</span>
+                                    </li>
+                                </ul>
+                                <div class="main_price">
+                                    <span class="price price--old">$20.14</span>
+                                    <span class="price price--new">$16.97</span>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="btn" href="#">Add to Cart</a>
+                                    <div class="action d-flex">
+                                        <a
+                                            class="action_link d-flex align-items-center justify-content-center"
+                                            href="#"
+                                            data-role="wishlist"
+                                        >
+                                            <i class="icon-heart"></i>
+                                        </a>
+                                        <a
+                                            class="action_link d-flex align-items-center justify-content-center"
+                                            href="#"
+                                            data-trigger="view"
+                                        >
+                                            <i class="icon-eye"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="top_list-item col-lg-6" data-order="3">
+                        <div class="top_list-item_wrapper d-flex flex-column flex-sm-row flex-lg-column flex-xxl-row">
+                            <div class="media">
+                                <a href="product.html" target="_blank" rel="noopener norefferer">
+                                    <picture>
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %} " srcset="{% static 'img/placeholder.jpg' %} " type="image/webp" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %} " src="{% static 'img/placeholder.jpg' %} " alt="media" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="main d-md-flex flex-column">
+                                <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer"
+                                    >Boost THC Tincture – Indica</a
+                                >
+                                <ul class="main_table d-flex flex-column">
+                                    <li class="list-item">
+                                        <span class="property">THC</span>
+                                        <span class="value">110.00-160.00%</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="property">CBD</span>
+                                        <span class="value">0.00-1.00mg/g</span>
+                                    </li>
+                                </ul>
+                                <div class="main_price">
+                                    <span class="price price--old">$43.55</span>
+                                    <span class="price price--new">$26.98</span>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="btn" href="#">Add to Cart</a>
+                                    <div class="action d-flex">
+                                        <a
+                                            class="action_link d-flex align-items-center justify-content-center"
+                                            href="#"
+                                            data-role="wishlist"
+                                        >
+                                            <i class="icon-heart"></i>
+                                        </a>
+                                        <a
+                                            class="action_link d-flex align-items-center justify-content-center"
+                                            href="#"
+                                            data-trigger="view"
+                                        >
+                                            <i class="icon-eye"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="top_list-item col-lg-6" data-order="4">
+                        <div class="top_list-item_wrapper d-flex flex-column flex-sm-row flex-lg-column flex-xxl-row">
+                            <div class="media">
+                                <a href="product.html" target="_blank" rel="noopener norefferer">
+                                    <picture>
+                                        <source data-srcset="{% static 'img/placeholder.jpg' %} " srcset="{% static 'img/placeholder.jpg' %} " type="image/webp" />
+                                        <img class="lazy" data-src="{% static 'img/placeholder.jpg' %} " src="{% static 'img/placeholder.jpg' %} " alt="media" />
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="main d-md-flex flex-column">
+                                <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer">Ace Of Spade</a>
+                                <ul class="main_table d-flex flex-column">
+                                    <li class="list-item">
+                                        <span class="property">THC</span>
+                                        <span class="value">110.00-160.00%</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="property">CBD</span>
+                                        <span class="value">0.00-1.00mg/g</span>
+                                    </li>
+                                </ul>
+                                <div class="main_price">
+                                    <span class="price price--old">$19.97</span>
+                                    <span class="price price--new">$13.22</span>
+                                </div>
+                                <div class="d-flex">
+                                    <a class="btn" href="#">Add to Cart</a>
+                                    <div class="action d-flex">
+                                        <a
+                                            class="action_link d-flex align-items-center justify-content-center"
+                                            href="#"
+                                            data-role="wishlist"
+                                        >
+                                            <i class="icon-heart"></i>
+                                        </a>
+                                        <a
+                                            class="action_link d-flex align-items-center justify-content-center"
+                                            href="#"
+                                            data-trigger="view"
+                                        >
+                                            <i class="icon-eye"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- Top products section end -->
+        <!-- SEO section start -->
+        <section class="seo section--nopb">
+            <div class="container">
+                <h2 class="seo_header" id="first">SEO Text</h2>
+                <div class="seo_content d-lg-flex justify-content-between">
+                    <p class="seo_content-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, rem repellendus! Maxime, cupiditate vel adipisci deleniti nesciunt illo consequatur libero optio eius. Dolor, laboriosam error sit dolorem nam debitis vero.
+                        Sapiente id in expedita autem reprehenderit temporibus eaque eligendi numquam quis, sed impedit consequatur tenetur culpa labore. Ipsam aliquam iste tempora nam, praesentium quibusdam qui. At omnis quia ullam beatae.
+                        Quae unde et beatae, deserunt sit sapiente culpa tempora libero, aliquid numquam fuga nulla at voluptatem obcaecati ea a animi velit! Soluta, veniam error quos minus maxime eos vel suscipit!
+                        Explicabo nihil aliquam sequi minus obcaecati qui veritatis voluptatum. Excepturi aliquam, sapiente enim autem, adipisci dolores vitae eaque.    
+                    </p>
+                    <p class="seo_content-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum amet tempore molestias deserunt similique voluptatem adipisci aut veritatis debitis, earum labore qui, illo culpa natus iusto, in necessitatibus sit facilis?
+                        Inventore eaque blanditiis aliquam similique cupiditate cum perspiciatis impedit! Dolor, alias ut atque error maxime repellendus numquam laborum molestiae libero nisi pariatur maiores architecto omnis necessitatibus recusandae velit! Ipsam, numquam.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- SEO section end -->
+  
+         <!-- Newsletter section start -->
+         <section class="newsletter section">
+            <div class="container">
+                <div class="wrapper"  id="bfirst">
+                    <div class="newsletter_deco">
+                        <div class="newsletter_deco-wrapper">
+                           <picture>
+                                    <img class="lazy leaf leaf--left" src="{% static 'img/image4.webp' %}" alt="">
+                            </picture>
+                        </div>
+                        <div class="newsletter_deco-wrapper">
+                            <picture>
+                                <img class="lazy leaf leaf--left" src="{% static 'img/image4.webp' %}" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                   
+                    <div class="newsletter_content">
+                        <div class="newsletter_header">
+                            <h2 class="newsletter_header-title">Sign Up for Our Newsletter</h2>
+                        </div>
+                        <form class="newsletter_form d-sm-flex" data-type="newsletter" action="#" method="post">
+                            <input class="newsletter_form-field field required" type="text" data-type="email" placeholder="Email" />
+                            <button class="newsletter_form-btn btn" type="submit">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+  
+
+    {% include 'block/footer.html' %}
+    {% include 'block/cart.html' %}   
+    <script src="{% static 'js/common.min.js' %}"></script>
+   <script src="{% static 'js/index.min.js' %}"></script>
+</body>
+</html>

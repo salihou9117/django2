@@ -1,0 +1,50 @@
+.logo{
+    margin-top: -30px;
+    width: 70px;
+    height: 70px;
+}
+#first{
+    color: #06b204;
+}
+#bfirst{
+    background-color: #098c06;
+}
+#border{
+    background-color: #06b204;
+    border-radius: 6px;
+    padding: 2px;
+}
+#padding{
+    padding-top: 5px;
+}
+#mybtn{
+    color: #06b204;
+}
+#mybtn::after, #mybtn:hover{
+    color: white;
+    background-color: #06b204;
+}
+#info{
+    color: #098c06;
+}
+#info:hover{
+    color: white;
+}
+#imgfont{
+    background-image: url("");
+}
+
+.pagehead{
+    padding: 60px 0;
+    background: url(../img/05.webp) center/cover no-repeat;
+    background-color: #06b204;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px
+}
+.promo_banner-img {
+    color: #fff;
+    background: url(../img/image5.jpg) center/cover no-repeat;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}

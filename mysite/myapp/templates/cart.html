@@ -1,0 +1,353 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'block/title.html' %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/preload.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/libs.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/cart.css' %}">
+</head>
+<body>
+    {% include 'block/header.html' %}
+
+    <header class="page" >
+        <div class="pagehead container-fluid" >
+            <div class="container">
+                <h1 class="page_header" id="first">cart</h1>
+                <p class="page_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde illo labore nesciunt quos .</p>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="cart section">
+            <div class="container d-md-flex justify-content-between align-content-start">
+                <div class="cart_main">
+                    <h3 class="cart_main-header d-flex align-items-center justify-content-between">
+                        Products
+                        <span>2 Items</span>
+                    </h3>
+                    <ul class="cart_main-list">
+                        <li class="cart_main-list_item">
+                            <div class="wrapper d-flex flex-wrap flex-xl-nowrap align-items-center justify-content-between">
+                                <div class="wrapper_item d-flex align-items-center">
+                                    <div class="wrapper_item-media">
+                                        <picture>
+                                            <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" type="image/webp" />
+                                            <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
+                                        </picture>
+                                    </div>
+                                    <div class="wrapper_item-info">
+                                        <h4 class="title">Jonny Chronic - French Macaroon</h4>
+                                        <span class="volume">3.5mg</span>
+                                    </div>
+                                </div>
+                                <div class="price_wrapper d-flex flex-column">
+                                    <span class="price price--old">$14.89</span>
+                                    <span class="price price--new">$7.49</span>
+                                </div>
+                                <div class="price_wrapper price_wrapper--subtotal d-flex flex-column">
+                                    <h5 class="title">Subtotal</h5>
+                                    <span class="price price--total">$14.98</span>
+                                </div>
+                                <div class="qty d-flex align-items-center justify-content-between">
+                                    <span class="qty_minus control disabled d-flex align-items-center">
+                                        <i class="icon-minus"></i>
+                                    </span>
+                                    <input class="qty_amount" type="number" readonly value="1" min="1" max="99" />
+                                    <span class="qty_plus control d-flex align-items-center">
+                                        <i class="icon-plus"></i>
+                                    </span>
+                                </div>
+                                <a class="close d-flex align-items-center align-items-sm-start" href="#">
+                                    <i class="icon-close"></i>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cart_main-list_item">
+                            <div class="wrapper d-flex flex-wrap flex-xl-nowrap align-items-center justify-content-between">
+                                <div class="wrapper_item d-flex align-items-center">
+                                    <div class="wrapper_item-media">
+                                        <picture>
+                                            <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" type="image/webp" />
+                                            <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
+                                        </picture>
+                                    </div>
+                                    <div class="wrapper_item-info">
+                                        <h4 class="title">Natures: CBD Tincture</h4>
+                                        <span class="volume">30ml</span>
+                                    </div>
+                                </div>
+                                <div class="price_wrapper d-flex flex-column">
+                                    <span class="price price--old">$54.89</span>
+                                    <span class="price price--new">$44.76</span>
+                                </div>
+                                <div class="price_wrapper price_wrapper--subtotal d-flex flex-column">
+                                    <h5 class="title">Subtotal</h5>
+                                    <span class="price price--total">$44.76</span>
+                                </div>
+                                <div class="qty d-flex align-items-center justify-content-between">
+                                    <span class="qty_minus control disabled d-flex align-items-center">
+                                        <i class="icon-minus"></i>
+                                    </span>
+                                    <input class="qty_amount" type="number" readonly value="1" min="1" max="99" />
+                                    <span class="qty_plus control d-flex align-items-center">
+                                        <i class="icon-plus"></i>
+                                    </span>
+                                </div>
+                                <a class="close d-flex align-items-center align-items-sm-start" href="#">
+                                    <i class="icon-close"></i>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="cart_main-action d-flex flex-column flex-sm-row align-items-center justify-content-sm-between">
+                        <a class="btn--underline" href="#">Keep Shopping</a>
+                        <a class="btn btn--green" href="#">Update cart</a>
+                    </div>
+                </div>
+                <div class="cart_summary">
+                    <h3 class="cart_summary-header">Order Summary</h3>
+                    <form class="cart_summary-form" action="#" method="post">
+                        <h5 class="cart_summary-form_header">Calculate Shipping</h5>
+                        <input class="cart_summary-form_field field" type="text" placeholder="Country" />
+                        <input class="cart_summary-form_field field" type="text" placeholder="City" />
+                        <input class="cart_summary-form_field field" type="text" placeholder="ZIP" />
+                        <button class="cart_summary-form_btn btn--underline" type="submit">Submit</button>
+                    </form>
+                    <div class="cart_summary-table">
+                        <div class="cart_summary-table_row d-flex justify-content-between">
+                            <span class="property">Items 2</span>
+                            <span class="value">$44.89</span>
+                        </div>
+                        <div class="cart_summary-table_row d-flex justify-content-between">
+                            <span class="property">Shipping</span>
+                            <span class="value">Free</span>
+                        </div>
+                        <div class="cart_summary-table_row cart_summary-table_row--total d-flex justify-content-between">
+                            <span class="property">Total</span>
+                            <span class="value">$59.74</span>
+                        </div>
+                    </div>
+                    <a class="cart_summary-btn btn" href="#">Checkout</a>
+                </div>
+            </div>
+        </section>
+        <aside>
+            <section class="top top--highlight section">
+                <div class="container">
+                    <h2 class="top_header">Top Sales Products</h2>
+                    <ul class="top_list d-lg-flex flex-wrap">
+                        <li class="top_list-item col-lg-6" data-order="1">
+                            <div class="top_list-item_wrapper d-flex flex-column flex-sm-row flex-lg-column flex-xxl-row">
+                                <div class="media">
+                                    <a href="product.html" target="_blank" rel="noopener norefferer">
+                                        <picture>
+                                            <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" type="image/webp" />
+                                            <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="main d-md-flex flex-column">
+                                    <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer"
+                                        >THC Full Spectrum: Natural</a
+                                    >
+                                    <ul class="main_table d-flex flex-column">
+                                        <li class="list-item">
+                                            <span class="property">THC</span>
+                                            <span class="value">110.00-160.00%</span>
+                                        </li>
+                                        <li class="list-item">
+                                            <span class="property">CBD</span>
+                                            <span class="value">0.00-1.00mg/g</span>
+                                        </li>
+                                    </ul>
+                                    <div class="main_price">
+                                        <span class="price price--old">$45.99</span>
+                                        <span class="price price--new">$36.87</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a class="btn" href="#">Add to Cart</a>
+                                        <div class="action d-flex">
+                                            <a
+                                                class="action_link d-flex align-items-center justify-content-center"
+                                                href="#"
+                                                data-role="wishlist"
+                                            >
+                                                <i class="icon-heart"></i>
+                                            </a>
+                                            <a
+                                                class="action_link d-flex align-items-center justify-content-center"
+                                                href="#"
+                                                data-trigger="view"
+                                            >
+                                                <i class="icon-eye"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top_list-item col-lg-6" data-order="2">
+                            <div class="top_list-item_wrapper d-flex flex-column flex-sm-row flex-lg-column flex-xxl-row">
+                                <div class="media">
+                                    <a href="product.html" target="_blank" rel="noopener norefferer">
+                                        <picture>
+                                            <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" type="image/webp" />
+                                            <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="main d-md-flex flex-column">
+                                    <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer">Black Dog</a>
+                                    <ul class="main_table d-flex flex-column">
+                                        <li class="list-item">
+                                            <span class="property">THC</span>
+                                            <span class="value">110.00-160.00%</span>
+                                        </li>
+                                        <li class="list-item">
+                                            <span class="property">CBD</span>
+                                            <span class="value">0.00-1.00mg/g</span>
+                                        </li>
+                                    </ul>
+                                    <div class="main_price">
+                                        <span class="price price--old">$20.14</span>
+                                        <span class="price price--new">$16.97</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a class="btn" href="#">Add to Cart</a>
+                                        <div class="action d-flex">
+                                            <a
+                                                class="action_link d-flex align-items-center justify-content-center"
+                                                href="#"
+                                                data-role="wishlist"
+                                            >
+                                                <i class="icon-heart"></i>
+                                            </a>
+                                            <a
+                                                class="action_link d-flex align-items-center justify-content-center"
+                                                href="#"
+                                                data-trigger="view"
+                                            >
+                                                <i class="icon-eye"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top_list-item col-lg-6" data-order="3">
+                            <div class="top_list-item_wrapper d-flex flex-column flex-sm-row flex-lg-column flex-xxl-row">
+                                <div class="media">
+                                    <a href="product.html" target="_blank" rel="noopener norefferer">
+                                        <picture>
+                                            <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" type="image/webp" />
+                                            <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="main d-md-flex flex-column">
+                                    <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer"
+                                        >Boost THC Tincture – Indica</a
+                                    >
+                                    <ul class="main_table d-flex flex-column">
+                                        <li class="list-item">
+                                            <span class="property">THC</span>
+                                            <span class="value">110.00-160.00%</span>
+                                        </li>
+                                        <li class="list-item">
+                                            <span class="property">CBD</span>
+                                            <span class="value">0.00-1.00mg/g</span>
+                                        </li>
+                                    </ul>
+                                    <div class="main_price">
+                                        <span class="price price--old">$43.55</span>
+                                        <span class="price price--new">$26.98</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a class="btn" href="#">Add to Cart</a>
+                                        <div class="action d-flex">
+                                            <a
+                                                class="action_link d-flex align-items-center justify-content-center"
+                                                href="#"
+                                                data-role="wishlist"
+                                            >
+                                                <i class="icon-heart"></i>
+                                            </a>
+                                            <a
+                                                class="action_link d-flex align-items-center justify-content-center"
+                                                href="#"
+                                                data-trigger="view"
+                                            >
+                                                <i class="icon-eye"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="top_list-item col-lg-6" data-order="4">
+                            <div class="top_list-item_wrapper d-flex flex-column flex-sm-row flex-lg-column flex-xxl-row">
+                                <div class="media">
+                                    <a href="product.html" target="_blank" rel="noopener norefferer">
+                                        <picture>
+                                            <source data-srcset="{% static 'img/placeholder.jpg' %}" srcset="{% static 'img/placeholder.jpg' %}" type="image/webp" />
+                                            <img class="lazy" data-src="{% static 'img/placeholder.jpg' %}" src="{% static 'img/placeholder.jpg' %}" alt="media" />
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="main d-md-flex flex-column">
+                                    <a class="main_title" href="product.html" target="_blank" rel="noopener norefferer">Ace Of Spade</a>
+                                    <ul class="main_table d-flex flex-column">
+                                        <li class="list-item">
+                                            <span class="property">THC</span>
+                                            <span class="value">110.00-160.00%</span>
+                                        </li>
+                                        <li class="list-item">
+                                            <span class="property">CBD</span>
+                                            <span class="value">0.00-1.00mg/g</span>
+                                        </li>
+                                    </ul>
+                                    <div class="main_price">
+                                        <span class="price price--old">$19.97</span>
+                                        <span class="price price--new">$13.22</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a class="btn" href="#">Add to Cart</a>
+                                        <div class="action d-flex">
+                                            <a
+                                                class="action_link d-flex align-items-center justify-content-center"
+                                                href="#"
+                                                data-role="wishlist"
+                                            >
+                                                <i class="icon-heart"></i>
+                                            </a>
+                                            <a
+                                                class="action_link d-flex align-items-center justify-content-center"
+                                                href="#"
+                                                data-trigger="view"
+                                            >
+                                                <i class="icon-eye"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </aside>
+    </main>
+
+    
+    {% include 'block/footer.html' %}
+    {% include 'block/cart.html' %}   
+    <script src="{% static 'js/common.min.js' %}"></script>
+   <script src="{% static 'js/index.min.js' %}"></script>
+</body>
+</html>
